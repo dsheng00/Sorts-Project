@@ -110,8 +110,9 @@ public class MergeSort
     		initValues();
     		startTime = System.nanoTime();
     		mergeSort(0, SIZE - 1);
-    		System.out.println(System.nanoTime() - startTime + " nanoseconds");
-    		endTime += System.nanoTime() - startTime;
+    		long temp = System.nanoTime() - startTime;
+    		System.out.println(temp + " nanoseconds");
+    		endTime += temp;
     	}
     	endTime /= 30;
     	System.out.println("The average was " + endTime + " nanoseconds");
