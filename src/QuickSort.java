@@ -90,6 +90,6 @@ public class QuickSort
     		endTime += System.nanoTime() - startTime;
     	}
     	endTime /= 30;
-    	System.out.println(endTime);
+    	System.out.println(endTime + " nanoseconds");
     }   
 }
