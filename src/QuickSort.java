@@ -84,8 +84,8 @@ public class QuickSort
     	long endTime = 0;
     	for (int i = 0; i < 30; i++)
     	{
-    		startTime = System.nanoTime();
     		initValues();
+    		startTime = System.nanoTime();
     		quickSort(0, SIZE - 1);
     		endTime += System.nanoTime() - startTime;
     	}
