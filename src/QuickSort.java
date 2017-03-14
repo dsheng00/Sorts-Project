@@ -87,9 +87,10 @@ public class QuickSort
     		initValues();
     		startTime = System.nanoTime();
     		quickSort(0, SIZE - 1);
+    		System.out.println(System.nanoTime() - startTime + " nanoseconds");
     		endTime += System.nanoTime() - startTime;
     	}
     	endTime /= 30;
-    	System.out.println(endTime + " nanoseconds");
+    	System.out.println("The average was " + endTime + " nanoseconds");
     }   
 }
