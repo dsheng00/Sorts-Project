@@ -76,4 +76,17 @@ public class QuickSort
 		swap(from, last);
 		return last;
 	}
+	
+    public static void main(String[] args) throws IOException
+    // Tests the other methods of the Sorts class
+    {
+        initValues();
+        printValues();
+        System.out.println("Values is sorted: " + isSorted());
+        System.out.println();
+        quickSort(0, SIZE - 1);
+        printValues();
+        System.out.println("Values is sorted: " + isSorted());
+        System.out.println();
+    }   
 }
