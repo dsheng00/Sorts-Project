@@ -1,2 +1,6 @@
 # Sorts-Project
-Created by Tristan Engst, Matthew Guo, David Sheng, and Eli Zhang
+By Tristan Engst, Matthew Guo, David Sheng, and Eli Zhang
+
+## Hi.
+### Hi.
+#### Hi.
