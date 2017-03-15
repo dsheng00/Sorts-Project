@@ -76,6 +76,6 @@ public class ShellSort
     		endTime += temp;
     	}
     	endTime /= 30;
-    	System.out.println("The average was " + endTime + " nanoseconds");
+    	System.out.println("\nThe average was " + endTime + " nanoseconds");
     }   
 }
