@@ -2,8 +2,8 @@ import java.io.IOException;
 
 public class ShellSort 
 {
-	public static final int SIZE = 5;          // Size of array to be sorted
-    private static int[] values = new int[SIZE];  // Values to be sorted
+	public static final int SIZE = 50;          // Size of array to be sorted
+	private static int[] values = new int[SIZE];  // Values to be sorted
     
     private static void initValues()
     // Initializes the values array with random integers from 0 to 99
@@ -41,28 +41,41 @@ public class ShellSort
         }
         System.out.println();
     }
-	
+    
     public static void shellSort()
     {
-    	
+    	int[] gapSize = {701, 301, 132, 57, 23, 10, 4, 1};
+    	for (int gap : gapSize)
+    	{
+    		if (gap < SIZE)
+    		{
+    			for (int i = gap; i < SIZE; i++)
+    			{
+    				int temp = values[i];
+    				int j;
+    				for (j = i; j >= gap && values[j - gap] > temp; j -= gap)
+    					values[j] = values[j - gap];
+    				values[j] = temp;
+    			}
+    		}
+    	}
     }
     
     public static void main(String[] args) throws IOException
     // Tests the other methods of the Sorts class
     {
-    	/*long startTime = 0;
+    	long startTime = 0;
     	long endTime = 0;
     	for (int i = 0; i < 30; i++)
     	{
     		initValues();
     		startTime = System.nanoTime();
     		shellSort();
-    		endTime += System.nanoTime() - startTime;
+    		long temp = System.nanoTime() - startTime;
+    		System.out.println(temp + " nanoseconds");
+    		endTime += temp;
     	}
     	endTime /= 30;
-    	System.out.println(endTime + " nanoseconds");*/
-    	initValues();
-    	printValues();
-    	System.out.println("array is sorted: " + isSorted());
+    	System.out.println("The average was " + endTime + " nanoseconds");
     }   
 }
