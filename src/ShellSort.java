@@ -1,17 +1,17 @@
 import java.io.*;
 
 /**
- * Runs the Shellsort sorting algorithm and calculates average run time
+ * Runs the Shellsort sorting algorithm and calculates average run time.
  * @author David Sheng, Eli Zhang, Matthew Guo, Tristan Engst
  * @version 3/15/17
  */
-public class ShellSort 
+public class ShellSort
 {
 	public static final int SIZE = 50;          // Size of array to be sorted
 	private static int[] values = new int[SIZE];  // Values to be sorted
 
 	/**
-	 * Initializes the values array with random integers from 0 to 99
+	 * Initializes the values array with random integers from 0 to 99.
 	 */
 	private static void initValues()
 	{
@@ -20,9 +20,9 @@ public class ShellSort
 			values[index] = (int) (Math.random() * 100) + 1;
 		}
 	}
-    
+
 	/**
-     * Swaps the integers at locations index1 and index2 of array values
+     * Swaps the integers at locations index1 and index2 of array values.
      * Precondition: index1 and index2 are less than size
      * @param index1 First index
      * @param index2 Second index
@@ -35,7 +35,7 @@ public class ShellSort
 	}
 
 	/**
-     * Returns whether the array values are sorted
+     * Returns whether the array values are sorted.
      * @return Whether the array values are sorted
      */
 	public static boolean isSorted()
@@ -48,7 +48,7 @@ public class ShellSort
 				sorted = false;
 			}
 		}
-		return sorted;   
+		return sorted;
 	}
 
 	/**
@@ -63,9 +63,9 @@ public class ShellSort
 		}
 		System.out.println();
 	}
-    
+
 	/**
-     * Sorts all elements in values array
+     * Sorts all elements in values array.
      */
 	public static void shellSort()
 	{
@@ -87,7 +87,7 @@ public class ShellSort
     		}
     	}
     }
-    
+
 	public static void main(String[] args) throws IOException
 	{
 		long startTime = 0;
@@ -103,5 +103,5 @@ public class ShellSort
     	}
     	endTime /= 30;
     	System.out.println("\nThe average was " + endTime + " nanoseconds");
-	}   
+	}
 }
